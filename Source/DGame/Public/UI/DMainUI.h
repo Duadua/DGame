@@ -24,5 +24,12 @@ public:
 	class UButton* m_option_bt;
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
 	class UButton* m_exit_bt;
-	
+
+public:
+	UFUNCTION()
+	void on_login_bt();
+	UFUNCTION()
+	void on_localin_bt();
+	UFUNCTION()
+	void on_exit_bt();
 };

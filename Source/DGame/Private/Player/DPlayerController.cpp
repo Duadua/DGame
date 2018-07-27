@@ -5,6 +5,9 @@ ADPlayerController::ADPlayerController(const FObjectInitializer& ObjectInitializ
 {
 	bShowMouseCursor = true;
 	m_b_can_rotate = false;
+
+//	UDUtility::debug_out("controller");
+
 }
 
 void ADPlayerController::BeginPlay()
@@ -45,6 +48,7 @@ void ADPlayerController::on_can_rotate_released() {
 	FInputModeGameAndUI input;
 	SetInputMode(input);
 }
+
 
 
 void ADPlayerController::GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const

@@ -12,6 +12,5 @@ class DGAME_API ADMainGameMode : public AGameMode
 public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float Delta) override;
-
 	
 };
