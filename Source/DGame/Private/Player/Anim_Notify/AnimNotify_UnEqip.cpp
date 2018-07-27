@@ -7,10 +7,8 @@ UAnimNotify_UnEqip::UAnimNotify_UnEqip(const FObjectInitializer& ObjectInitializ
 
 bool UAnimNotify_UnEqip::Received_Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation)
 {
-	if(!m_pawn) {
-		m_pawn = Cast<ADCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	}
-	if(!m_pawn) {
+	if (!m_pawn) { m_pawn = Cast<ADCharacter>(MeshComp->GetOwner()); }
+	if (!m_pawn) {
 		UDUtility::debug_out("no character");
 		return false;
 	}

@@ -27,3 +27,24 @@ void UDUtility::debug_out_float(float msg)
 }
 
 
+AGameModeBase* UDUtility::game_mode_instance = nullptr;
+void UDUtility::set_game_mode(AGameModeBase* pGameMode) { game_mode_instance = pGameMode; }
+AGameModeBase * UDUtility::get_game_mode() { return game_mode_instance; }
+
+
+APlayerController* UDUtility::get_local_playercontroller(UObject* WorldContextObject)
+{
+	if (UWorld* World = GEngine->GetWorldFromContextObjectChecked(WorldContextObject))
+	{
+		for (auto Iterator = World->GetPlayerControllerIterator(); Iterator; ++Iterator)
+		{
+			APlayerController* PlayerController = Cast<APlayerController>(*Iterator);
+			if (PlayerController->IsLocalController())
+			{
+				// For this project, we will only ever have one local player.  
+				return PlayerController;
+			}
+		}
+	}
+	return nullptr;
+}

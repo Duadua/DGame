@@ -11,6 +11,7 @@ ADGameMode::ADGameMode(const FObjectInitializer& ObjectInitializer) : Super(Obje
 	if(player_pawn_class.Class != NULL) { DefaultPawnClass = player_pawn_class.Class; }
 
 	m_client_index = 0;
+	UDUtility::set_game_mode(this);
 }
 
 

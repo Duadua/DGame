@@ -8,7 +8,8 @@ class APlayerStart;
 class ADPlayerController;
 
 UCLASS(config = Game)
-class DGAME_API ADGameMode : public AGameMode {
+class DGAME_API ADGameMode : public AGameMode 
+{
 	GENERATED_UCLASS_BODY()
 
 public:

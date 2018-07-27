@@ -12,16 +12,20 @@ public class DGame : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "InputCore",
+                "UMG",
             });
 
         PrivateDependencyModuleNames.AddRange(
             new string[] {
-                //"OnlineSubsystemNull",
+                "OnlineSubsystemNull",
+                "Slate",
+                "SlateCore",
             });
 
         PrivateIncludePaths.AddRange(
             new string[] {
                 "DGame/Private",
+                "DGame/Private/UI",
                 "DGame/Private/Level",
                 "DGame/Private/Player",
                 "DGame/Private/Player/Anim_Notify",
