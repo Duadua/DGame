@@ -25,10 +25,13 @@ void UDMainUI::init()
 
 void UDMainUI::on_login_bt()
 {
+	
 	if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
 	{
+		
+		if (PC->Role == ROLE_Authority) { PC->ConsoleCommand("open mp_start"); }
 		//FString URL = FString::Printf(TEXT("%s:%s?Alias=%s"), *(TxtServerIP->GetText().ToString()), *(TxtServerPort->GetText().ToString()), *(TxtUsername->GetText().ToString()));
-		FString URL = TEXT("127.0.0.1:17777?Alias = hello");
+		FString URL = TEXT("127.0.0.1:17777");
 
 		UDUtility::debug_out(URL);
 		PC->ClientTravel(*URL, TRAVEL_Absolute);
