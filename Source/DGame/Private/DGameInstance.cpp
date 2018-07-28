@@ -24,14 +24,15 @@ void UDGameInstance::Shutdown()
 }
 void UDGameInstance::StartGameInstance()
 {
+	Super::StartGameInstance();
 
 }
 void UDGameInstance::ReceivedNetworkEncryptionToken(const FString& EncryptionToken, const FOnEncryptionKeyResponse& Delegate)
 {
-
+	Super::ReceivedNetworkEncryptionToken(EncryptionToken, Delegate);
 }
 void UDGameInstance::ReceivedNetworkEncryptionAck(const FOnEncryptionKeyResponse& Delegate)
 {
-
+	Super::ReceivedNetworkEncryptionAck(Delegate);
 }
 

@@ -7,10 +7,12 @@
 
 #include "Components/Button.h"
 #include "Components/TextBlock.h"
-#include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/EditableTextBox.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
+
+#include "Camera/CameraComponent.h"
 
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PlayerStart.h"
@@ -24,8 +26,10 @@
 #include "UnrealNetwork.h"
 #include "UObject/ConstructorHelpers.h"
 
-#include "DTypes.h"
 #include "DMainUI.h"
+#include "DLoginUI.h"
+
+#include "DTypes.h"
 #include "DUtility.h"
 #include "DGameMode.h"
 #include "DCharacter.h"

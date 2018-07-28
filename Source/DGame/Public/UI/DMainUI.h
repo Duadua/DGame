@@ -8,7 +8,7 @@ UCLASS()
 class DGAME_API UDMainUI : public UUserWidget
 {
 	GENERATED_BODY()
-	
+
 public:
 	//≥ı ºªØ
 	virtual bool Initialize() override;
@@ -25,11 +25,4 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
 	class UButton* m_exit_bt;
 
-public:
-	UFUNCTION()
-	void on_login_bt();
-	UFUNCTION()
-	void on_localin_bt();
-	UFUNCTION()
-	void on_exit_bt();
 };

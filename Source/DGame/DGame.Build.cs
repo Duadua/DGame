@@ -17,7 +17,6 @@ public class DGame : ModuleRules
 
         PrivateDependencyModuleNames.AddRange(
             new string[] {
-                "OnlineSubsystemNull",
                 "Slate",
                 "SlateCore",
             });

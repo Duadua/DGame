@@ -24,4 +24,23 @@ public:
 	class UDMainUI* m_main_ui;
 	void init_main_ui();
 
+	UFUNCTION()
+	void on_login_bt();
+	UFUNCTION()
+	void on_localin_bt();
+	UFUNCTION()
+	void on_option_bt();
+	UFUNCTION()
+	void on_exit_bt();
+
+	// µÇÂ¼½çÃæ
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
+	class UDLoginUI* m_login_ui;
+	void init_login_ui();
+
+	UFUNCTION()
+	void on_login_login_bt();
+	UFUNCTION()
+	void on_login_cancel_bt();
+
 };
