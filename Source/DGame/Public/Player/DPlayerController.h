@@ -26,7 +26,22 @@ public:
 	void on_can_rotate_pressed();
 	void on_can_rotate_released();
 
+	
+
+public:
+	// Ö÷½çÃæ
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "UI")
+	class UDStartUI* m_start_ui;
+
+	void init_start_ui();				
+
+	void update_hc();
+	void update_sb();
+
+public:
 	UPROPERTY(BlueprintReadWrite, Replicated)
-	int m_client_type;
+	int m_id;
+	UPROPERTY(Replicated)
+	FString m_name;
 
 };
